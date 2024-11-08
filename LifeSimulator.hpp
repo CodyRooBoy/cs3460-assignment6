@@ -3,6 +3,7 @@
 #include "Pattern.hpp"
 
 #include <cstdint>
+#include <vector>
 
 class LifeSimulator
 {
@@ -19,4 +20,8 @@ class LifeSimulator
   private:
     std::uint8_t sizeX;
     std::uint8_t sizeY;
+
+    std::vector<std::vector<bool>> world;
+
+    int countNeighbors(std::uint8_t x, std::uint8_t y) const;
 };
